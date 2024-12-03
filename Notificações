@@ -1,0 +1,6 @@
+import PushNotification from 'react-native-push-notification';
+
+PushNotification.localNotification({
+    title: "Lembrete",
+    message: "Você tem um dia de home office agendado amanhã!",
+});
