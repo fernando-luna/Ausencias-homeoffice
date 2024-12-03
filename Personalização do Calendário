@@ -1,0 +1,3 @@
+const filterByDepartment = (events, department) => {
+    return events.filter(event => event.department === department);
+};
