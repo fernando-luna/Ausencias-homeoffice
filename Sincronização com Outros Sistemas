@@ -1,0 +1,8 @@
+import * as FileSystem from 'expo-file-system';
+
+const exportToCSV = async (data) => {
+    const csv = data.map(row => row.join(',')).join('\n');
+    const fileUri = FileSystem.documentDirectory + 'relatorio.csv';
+    await FileSystem.writeAsStringAsync(fileUri, csv);
+    console.log('Arquivo salvo em:', fileUri);
+};
