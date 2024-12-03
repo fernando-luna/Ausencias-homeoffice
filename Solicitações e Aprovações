@@ -1,0 +1,8 @@
+const submitRequest = (userId, date, type) => {
+    firebase.firestore().collection('requests').add({
+        userId,
+        date,
+        type,
+        status: 'pending',
+    });
+};
